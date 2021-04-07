@@ -7,17 +7,18 @@ package com.covid.models;
 
 import java.time.LocalDate;
 
+
 /**
  *
  * @author samso
  */
 public class Symptoms{
     
-    private String Id;
+    private int Id;
     private String name;
     private String Severity;
 
-    public Symptoms(String Id, String name, String Severity) {
+    public Symptoms(int Id, String name, String Severity) {
         this.Id = Id;
         this.name = name;
         this.Severity = Severity;
@@ -26,11 +27,11 @@ public class Symptoms{
     public Symptoms() {
     }
 
-    public String getId() {
+    public int getId() {
         return Id;
     }
 
-    public void setId(String Id) {
+    public void setId(int Id) {
         this.Id = Id;
     }
 
