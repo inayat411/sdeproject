@@ -5,6 +5,9 @@
  */
 package com.covid.models;
 
+import java.util.List;
+import javax.persistence.OneToMany;
+
 /**
  *
  * @author samso
@@ -14,6 +17,9 @@ public class PatientAccount {
     String PatientId;
     String PatientUser;
     String Password;
+    
+    @OneToMany(mappedBy = "PatientAccount")
+    private List<Patient> Patients;
 
     public PatientAccount() {
     }
