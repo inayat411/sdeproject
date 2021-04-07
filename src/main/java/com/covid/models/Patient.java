@@ -6,6 +6,7 @@
 package com.covid.models;
 
 import java.time.LocalDate;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -18,6 +19,9 @@ public class Patient {
     private LocalDate birthdate;
     private String Gender;
     private String Email;
+    
+    @ManyToOne
+    PatientAccount patientaccount;
 
     public Patient() {
     }
