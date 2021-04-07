@@ -4,6 +4,8 @@ import com.covid.models.Patient;
 import com.covid.models.PatientAccount;
 import com.covid.models.Symptoms;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -24,23 +26,31 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
+ 
     public static void main(String[] args) {
         //Symptoms
-        Symptoms fever = new Symptoms("Sars1", "Fever", "Less Severe");
-        Symptoms drycough = new Symptoms("Sars2", "Dry Cough", "Less Severe");
-        Symptoms tiredness = new Symptoms("Sars3", "Tiredness", "Less Severe");
-        Symptoms bodypain = new Symptoms("Sars4", "Body Pain", "Less Severe");
-        Symptoms throat = new Symptoms("Sars5", "Sore Throat", "Less Severe");
-        Symptoms diarrhoea = new Symptoms("Sars6", "Diarrhoea", "Less Severe");
-        Symptoms conjunctivitis = new Symptoms("Sars7", "Conjunctivitis", "Less Severe");
-        Symptoms headache = new Symptoms("Sars8", "Headache", "Less Severe");
-        Symptoms tastesmell = new Symptoms("Sars9", "Loss of taste and smell", "Less Severe");
-        Symptoms rash = new Symptoms("Sars10", "Rash or discolouration of skin", "Less Severe");
-        
-        Symptoms breathing = new Symptoms("Sars11", "Difficulty of breathing", "Severe");
-        Symptoms chestpain = new Symptoms("Sars12", "Pain or pressure in chest", "Severe");
-        Symptoms speechmov = new Symptoms("Sars13", "Loss of speech or movement", "Severe");
+        Symptoms fever = new Symptoms(1, "Fever", "Less Severe");
+        Symptoms drycough = new Symptoms(8, "Dry Cough", "Less Severe");
+        Symptoms tiredness = new Symptoms(3, "Tiredness", "Less Severe");
+        Symptoms bodypain = new Symptoms(4, "Body Pain", "Less Severe");
+        Symptoms throat = new Symptoms(11, "Sore Throat", "Less Severe");
+        Symptoms diarrhoea = new Symptoms(9, "Diarrhoea", "Less Severe");
+        Symptoms conjunctivitis = new Symptoms(12, "Conjunctivitis", "Less Severe");
+        Symptoms headache = new Symptoms(2, "Headache", "Less Severe");
+        Symptoms tastesmell = new Symptoms(6, "Loss of taste and smell", "Less Severe");
+        Symptoms rash = new Symptoms(10, "Rash or discolouration of skin", "Less Severe");
+        //Severe Symptoms
+        Symptoms breathing = new Symptoms(5, "Difficulty of breathing", "Severe");
+        Symptoms chestpain = new Symptoms(7, "Pain or pressure in chest", "Severe");
+        Symptoms speechmov = new Symptoms(13, "Loss of speech or movement", "Severe");
+                              
+    /*public static void Covidcheck(int ){ 
+            if(a >= 7 ){
+            System.out.println("Please Visit your Doctor");
+            }else{
+                System.out.println("You have Coivd");
+            }
+        }*/
                                 
         //Patients
         Patient p1 = new Patient("Richard", "01A75Q", LocalDate.of(1965, 5, 21), "Male", "richard@gmail.com");
@@ -56,7 +66,7 @@ public class App extends Application {
         PatientAccount PA4 = new PatientAccount("", "Kate", "PaSsWoRd656");
         PatientAccount PA5 = new PatientAccount("", "David", "Davidpassword5458");
         
-        System.out.println("Today is a good day");
+        System.out.println(l);
         launch();
     }
 
