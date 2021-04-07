@@ -30,27 +30,60 @@ public class App extends Application {
     public static void main(String[] args) {
         //Symptoms
         Symptoms fever = new Symptoms(1, "Fever", "Less Severe");
-        Symptoms drycough = new Symptoms(8, "Dry Cough", "Less Severe");
+        Symptoms drycough = new Symptoms(2, "Dry Cough", "Less Severe");
         Symptoms tiredness = new Symptoms(3, "Tiredness", "Less Severe");
         Symptoms bodypain = new Symptoms(4, "Body Pain", "Less Severe");
-        Symptoms throat = new Symptoms(11, "Sore Throat", "Less Severe");
-        Symptoms diarrhoea = new Symptoms(9, "Diarrhoea", "Less Severe");
-        Symptoms conjunctivitis = new Symptoms(12, "Conjunctivitis", "Less Severe");
-        Symptoms headache = new Symptoms(2, "Headache", "Less Severe");
-        Symptoms tastesmell = new Symptoms(6, "Loss of taste and smell", "Less Severe");
+        Symptoms throat = new Symptoms(5, "Sore Throat", "Less Severe");
+        Symptoms diarrhoea = new Symptoms(6, "Diarrhoea", "Less Severe");
+        Symptoms conjunctivitis = new Symptoms(7, "Conjunctivitis", "Less Severe");
+        Symptoms headache = new Symptoms(8, "Headache", "Less Severe");
+        Symptoms tastesmell = new Symptoms(9, "Loss of taste and smell", "Less Severe");
         Symptoms rash = new Symptoms(10, "Rash or discolouration of skin", "Less Severe");
         //Severe Symptoms
-        Symptoms breathing = new Symptoms(5, "Difficulty of breathing", "Severe");
-        Symptoms chestpain = new Symptoms(7, "Pain or pressure in chest", "Severe");
+        Symptoms breathing = new Symptoms(11, "Difficulty of breathing", "Severe");
+        Symptoms chestpain = new Symptoms(12, "Pain or pressure in chest", "Severe");
         Symptoms speechmov = new Symptoms(13, "Loss of speech or movement", "Severe");
                               
-    /*public static void Covidcheck(int ){ 
+    // Common cold: throat / cough / bodypain
+        
+        /*public static void Covidcheck(int ){ 
             if(a >= 7 ){
             System.out.println("Please Visit your Doctor");
             }else{
                 System.out.println("You have Coivd");
             }
         }*/
+        
+        /* It should be something like a boolean function, to count how many symptoms are "true":
+        
+        int counter=0;
+        
+        if(=true){ // if a symptom is markedas true
+        ++counter; // counts how many symptoms were marked as true
+        }
+        
+        // if he only has bodypain / sore throat AND does not have any severe symptoms
+        // in case of severe symptoms it will automatically say you have covid
+        if(a=bodypain || a=throat && a != breathing && a != chestpain && a != speechmov){
+        print ("You have common cold go drink tea etc etc")
+        }
+        
+        // if he has more than 5 symptoms maybe it's covid
+        if(counter>=5){
+        print (You might have covid please visit your doctor)
+        }
+        
+        // if less than 5 symptoms, none of them are serious
+        if(counter<=5 && a != breathing && a != chestpain && a != speechmov){
+        print (In the next few days if you develop more symptoms or the symptoms worsen, seek medical attention)
+        }
+        
+        // if he def has covid
+        if(a == breahting || a == chestpain && a = speechmov){
+        print (You have severe symptoms that may indicate you have Covid, seek immediate medical attention);
+        }
+        
+        */
                                 
         //Patients
         Patient p1 = new Patient("Richard", "01A75Q", LocalDate.of(1965, 5, 21), "Male", "richard@gmail.com");
